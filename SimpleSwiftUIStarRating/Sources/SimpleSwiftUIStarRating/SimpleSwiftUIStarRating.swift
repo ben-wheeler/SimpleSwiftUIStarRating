@@ -1,12 +1,18 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
+//
+//  SimpleSwiftUIStarRating.swift
+//  BookEnd
+//
+//  Created by Ben Wheeler on 29/12/2023.
+//
 
 import SwiftUI
 
-struct StarRatingView: View {
+struct SimpleSwiftUIStarRating: View {
     var rating: Double
     var maxRating: Int?
-    var starColor: Color?
+    var color: Color?
 
     private var effectiveMaxRating: Int {
         maxRating ?? 5
@@ -29,7 +35,7 @@ struct StarRatingView: View {
         HStack(spacing: 4) {
             ForEach(0..<effectiveMaxRating, id: \.self) { index in
                 Image(systemName: starType(for: index))
-                    .foregroundColor(starColor ?? .yellow)
+                    .foregroundColor(color ?? .yellow)
             }
         }
         .accessibilityElement(children: .combine)
@@ -40,9 +46,9 @@ struct StarRatingView: View {
 struct StarRatingView_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 20) {
-            StarRatingView(rating: 3.5, maxRating: 5, starColor: .red)
-            StarRatingView(rating: 4.0, maxRating: 10, starColor: .blue)
-            StarRatingView(rating: 1.5, maxRating: nil, starColor: nil)
+            SimpleSwiftUIStarRating(rating: 3.5, maxRating: 5, color: .red)
+            SimpleSwiftUIStarRating(rating: 4.0, maxRating: 10, color: .blue)
+            SimpleSwiftUIStarRating(rating: 1.5, maxRating: nil, color: nil)
         }
         .padding()
     }
