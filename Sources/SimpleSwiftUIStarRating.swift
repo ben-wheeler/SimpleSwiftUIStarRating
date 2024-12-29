@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-struct SimpleSwiftUIStarRating: View {
+public struct SimpleSwiftUIStarRating: View {
     var rating: Double
     var maxRating: Int?
     var color: Color?
@@ -31,7 +31,7 @@ struct SimpleSwiftUIStarRating: View {
         }
     }
 
-    var body: some View {
+    public var body: some View {
         HStack(spacing: 4) {
             ForEach(0..<effectiveMaxRating, id: \.self) { index in
                 Image(systemName: starType(for: index))
