@@ -31,6 +31,13 @@ public struct SimpleSwiftUIStarRating: View {
             return "star"
         }
     }
+    
+    public init(rating: Double, maxRating: Int? = nil, color: Color? = nil) {
+        self.rating = rating
+        self.maxRating = maxRating
+        self.color = color
+    }
+
 
     public var body: some View {
         HStack(spacing: 4) {
