@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+@available(iOS 14.0, macOS 11.0, watchOS 7, tvOS 14.0, *)
 public struct SimpleSwiftUIStarRating: View {
     var rating: Double
     var maxRating: Int?
