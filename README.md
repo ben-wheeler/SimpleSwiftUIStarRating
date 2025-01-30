@@ -12,7 +12,7 @@ Installation can be handled via Xcode.
 
 See Xcode [documentation for more details](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app).
 
-## Example Usages
+## Usages
 Component can easily be created with only a `rating:`. But can also take in additional `color` and `maxRating`. 
 For Example:
 ```
@@ -21,12 +21,13 @@ SimpleSwiftUIStarRating(rating: 4.0, maxRating: 10)
 SimpleSwiftUIStarRating(rating: 3.5, starColor: .red)
 ```
 
-Example usages:
+### Example usage:
 
-<img width="201" alt="image" src="https://github.com/user-attachments/assets/7dca40ca-efb5-4452-a936-fa35d9feb4af" />
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/f4bd561b-134f-45fa-bdab-b33a49d66bcf" />
 
 ```
 SimpleSwiftUIStarRating(rating: 3.5, maxRating: 5, starColor: .red)
 SimpleSwiftUIStarRating(rating: 4.0, maxRating: 10, starColor: .blue)
 SimpleSwiftUIStarRating(rating: 1.5, maxRating: nil, starColor: nil)
+    .font(.title)
 ```
