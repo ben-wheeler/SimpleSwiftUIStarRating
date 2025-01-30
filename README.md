@@ -20,6 +20,7 @@ SimpleSwiftUIStarRating(rating: 1.5)
 SimpleSwiftUIStarRating(rating: 4.0, maxRating: 10)
 SimpleSwiftUIStarRating(rating: 3.5, starColor: .red)
 ```
+Sizing can be controlled via `font()`.
 
 ### Example usage:
 
