@@ -1,5 +1,5 @@
 # SimpleSwiftUIStarRating
-A simple component used to view star ratings in SwiftUI. 
+A simple component used to view star ratings in SwiftUI. \n
 Sizing can be controlled via `.font()` and other SwiftUI related synatx. 
 
 ### Requires:

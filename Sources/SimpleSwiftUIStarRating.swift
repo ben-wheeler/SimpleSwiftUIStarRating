@@ -43,7 +43,7 @@ public struct SimpleSwiftUIStarRating: View {
     public var body: some View {
         HStack(spacing: 4) {
             ForEach(0..<effectiveMaxRating, id: \.self) { index in
-                Image(systemName: starType(for: index))
+                Text(Image(systemName: starType(for: index)))
                     .foregroundColor(color ?? .yellow)
             }
         }
@@ -58,6 +58,7 @@ struct StarRatingView_Previews: PreviewProvider {
             SimpleSwiftUIStarRating(rating: 3.26, maxRating: 5, color: .red)
             SimpleSwiftUIStarRating(rating: 4.0, maxRating: 10, color: .blue)
             SimpleSwiftUIStarRating(rating: 1.5, maxRating: nil, color: nil)
+                .font(.title)
         }
         .padding()
     }
