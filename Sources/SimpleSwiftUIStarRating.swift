@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 //
 //  SimpleSwiftUIStarRating.swift
-//  BookEnd
+//  SimpleSwiftUIStarRating
 //
 //  Created by Ben Wheeler on 29/12/2023.
 //
@@ -20,8 +20,9 @@ public struct SimpleSwiftUIStarRating: View {
     }
 
     private func starType(for index: Int) -> String {
-        let fullStars = floor(rating)
-        let isHalfStar = rating - fullStars >= 0.5
+        let roundedRating = (rating * 2).rounded(.toNearestOrEven) / 2
+        let fullStars = floor(roundedRating)
+        let isHalfStar = roundedRating - fullStars == 0.5
 
         if Double(index) < fullStars {
             return "star.fill"
@@ -54,7 +55,7 @@ public struct SimpleSwiftUIStarRating: View {
 struct StarRatingView_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 20) {
-            SimpleSwiftUIStarRating(rating: 3.5, maxRating: 5, color: .red)
+            SimpleSwiftUIStarRating(rating: 3.26, maxRating: 5, color: .red)
             SimpleSwiftUIStarRating(rating: 4.0, maxRating: 10, color: .blue)
             SimpleSwiftUIStarRating(rating: 1.5, maxRating: nil, color: nil)
         }
